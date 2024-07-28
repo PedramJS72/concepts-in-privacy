@@ -120,8 +120,7 @@ Ontology Classes
 -	addresses Threat: (Domain: Privacy Enhancing Technology, Range: Privacy Threat) Links a technology to the threat it addresses.
 
 
-8	Individuals
-
+*	Individuals
 
 -	Principal Data Minimization: An individual with a description of Data Minimization.
 
