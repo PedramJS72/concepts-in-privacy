@@ -1,0 +1,167 @@
+<rdf:RDF xmlns="http://www.semanticweb.org/privacy-ontology#"
+     xml:base="http://www.semanticweb.org/privacy-ontology"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/privacy-ontology"/>
+
+    <!-- Classes -->
+    <owl:Class rdf:about="#PrivacyPrinciple"/>
+    <owl:Class rdf:about="#PrivacyThreat"/>
+    <owl:Class rdf:about="#PrivacyEnhancingTechnology"/>
+    <owl:Class rdf:about="#PersonalInformation"/>
+    <owl:Class rdf:about="#PrivacyLaw"/>
+
+    <!-- Subclasses of PrivacyPrinciple -->
+    <owl:Class rdf:about="#DataMinimization">
+        <rdfs:subClassOf rdf:resource="#PrivacyPrinciple"/>
+    </owl:Class>
+    <owl:Class rdf:about="#PurposeLimitation">
+        <rdfs:subClassOf rdf:resource="#PrivacyPrinciple"/>
+    </owl:Class>
+    <owl:Class rdf:about="#Transparency">
+        <rdfs:subClassOf rdf:resource="#PrivacyPrinciple"/>
+    </owl:Class>
+    <owl:Class rdf:about="#Accountability">
+        <rdfs:subClassOf rdf:resource="#PrivacyPrinciple"/>
+    </owl:Class>
+    <owl:Class rdf:about="#Consent">
+        <rdfs:subClassOf rdf:resource="#PrivacyPrinciple"/>
+    </owl:Class>
+
+    <!-- Subclasses of PrivacyThreat -->
+    <owl:Class rdf:about="#DataBreach">
+        <rdfs:subClassOf rdf:resource="#PrivacyThreat"/>
+    </owl:Class>
+    <owl:Class rdf:about="#IdentityTheft">
+        <rdfs:subClassOf rdf:resource="#PrivacyThreat"/>
+    </owl:Class>
+    <owl:Class rdf:about="#Surveillance">
+        <rdfs:subClassOf rdf:resource="#PrivacyThreat"/>
+    </owl:Class>
+    <owl:Class rdf:about="#Phishing">
+        <rdfs:subClassOf rdf:resource="#PrivacyThreat"/>
+    </owl:Class>
+    <owl:Class rdf:about="#SocialEngineering">
+        <rdfs:subClassOf rdf:resource="#PrivacyThreat"/>
+    </owl:Class>
+
+    <!-- Subclasses of PrivacyEnhancingTechnology -->
+    <owl:Class rdf:about="#Encryption">
+        <rdfs:subClassOf rdf:resource="#PrivacyEnhancingTechnology"/>
+    </owl:Class>
+    <owl:Class rdf:about="#Anonymization">
+        <rdfs:subClassOf rdf:resource="#PrivacyEnhancingTechnology"/>
+    </owl:Class>
+    <owl:Class rdf:about="#Pseudonymization">
+        <rdfs:subClassOf rdf:resource="#PrivacyEnhancingTechnology"/>
+    </owl:Class>
+    <owl:Class rdf:about="#AccessControl">
+        <rdfs:subClassOf rdf:resource="#PrivacyEnhancingTechnology"/>
+    </owl:Class>
+    <owl:Class rdf:about="#SecureMultiPartyComputation">
+        <rdfs:subClassOf rdf:resource="#PrivacyEnhancingTechnology"/>
+    </owl:Class>
+
+    <!-- Subclasses of PersonalInformation -->
+    <owl:Class rdf:about="#BiometricData">
+        <rdfs:subClassOf rdf:resource="#PersonalInformation"/>
+    </owl:Class>
+    <owl:Class rdf:about="#ContactInformation">
+        <rdfs:subClassOf rdf:resource="#PersonalInformation"/>
+    </owl:Class>
+    <owl:Class rdf:about="#FinancialInformation">
+        <rdfs:subClassOf rdf:resource="#PersonalInformation"/>
+    </owl:Class>
+    <owl:Class rdf:about="#HealthInformation">
+        <rdfs:subClassOf rdf:resource="#PersonalInformation"/>
+    </owl:Class>
+    <owl:Class rdf:about="#LocationInformation">
+        <rdfs:subClassOf rdf:resource="#PersonalInformation"/>
+    </owl:Class>
+
+    <!-- Subclasses of PrivacyLaw -->
+    <owl:Class rdf:about="#GDPR">
+        <rdfs:subClassOf rdf:resource="#PrivacyLaw"/>
+    </owl:Class>
+    <owl:Class rdf:about="#CCPA">
+        <rdfs:subClassOf rdf:resource="#PrivacyLaw"/>
+    </owl:Class>
+    <owl:Class rdf:about="#HIPAA">
+        <rdfs:subClassOf rdf:resource="#PrivacyLaw"/>
+    </owl:Class>
+    <owl:Class rdf:about="#FERPA">
+        <rdfs:subClassOf rdf:resource="#PrivacyLaw"/>
+    </owl:Class>
+    <owl:Class rdf:about="#COPPA">
+        <rdfs:subClassOf rdf:resource="#PrivacyLaw"/>
+    </owl:Class>
+
+    <!-- Data Properties -->
+    <owl:DatatypeProperty rdf:about="#hasDescription">
+        <rdfs:domain rdf:resource="#PrivacyPrinciple"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:about="#hasSeverity">
+        <rdfs:domain rdf:resource="#PrivacyThreat"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:about="#hasImplementationCost">
+        <rdfs:domain rdf:resource="#PrivacyEnhancingTechnology"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:about="#hasDataValue">
+        <rdfs:domain rdf:resource="#PersonalInformation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:about="#hasEffectiveDate">
+        <rdfs:domain rdf:resource="#PrivacyLaw"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+    </owl:DatatypeProperty>
+
+    <!-- Object Properties -->
+    <owl:ObjectProperty rdf:about="#isProtectedBy">
+        <rdfs:domain rdf:resource="#PersonalInformation"/>
+        <rdfs:range rdf:resource="#PrivacyEnhancingTechnology"/>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="#isThreatenedBy">
+        <rdfs:domain rdf:resource="#PersonalInformation"/>
+        <rdfs:range rdf:resource="#PrivacyThreat"/>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="#isGovernedBy">
+        <rdfs:domain rdf:resource="#PersonalInformation"/>
+        <rdfs:range rdf:resource="#PrivacyLaw"/>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="#implementsPrinciple">
+        <rdfs:domain rdf:resource="#PrivacyEnhancingTechnology"/>
+        <rdfs:range rdf:resource="#PrivacyPrinciple"/>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="#addressesThreat">
+        <rdfs:domain rdf:resource="#PrivacyEnhancingTechnology"/>
+        <rdfs:range rdf:resource="#PrivacyThreat"/>
+    </owl:ObjectProperty>
+
+    <!-- Individuals -->
+    <PrivacyPrinciple rdf:about="#PrincipleDataMinimization">
+        <rdf:type rdf:resource="#DataMinimization"/>
+        <hasDescription>Data should be limited to what is necessary for the purposes for which they are processed.</hasDescription>
+    </PrivacyPrinciple>
+    <PrivacyThreat rdf:about="#ThreatDataBreach">
+        <rdf:type rdf:resource="#DataBreach"/>
+        <hasSeverity>5</hasSeverity>
+    </PrivacyThreat>
+    <PrivacyEnhancingTechnology rdf:about="#TechnologyEncryption">
+        <rdf:type rdf:resource="#Encryption"/>
+        <hasImplementationCost>1000.0</hasImplementationCost>
+    </PrivacyEnhancingTechnology>
+    <PersonalInformation rdf:about="#InfoBiometricData">
+        <rdf:type rdf:resource="#BiometricData"/>
+        <hasDataValue>Fingerprint, Retina Scan</hasDataValue>
+    </PersonalInformation>
+    <PrivacyLaw rdf:about="#LawGDPR">
+        <rdf:type rdf:resource="#GDPR"/>
+        <hasEffectiveDate>2018-05-25</hasEffectiveDate>
+    </PrivacyLaw>
+
+</rdf:RDF>
