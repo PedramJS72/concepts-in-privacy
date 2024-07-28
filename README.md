@@ -1,136 +1,132 @@
 Privacy Concepts Ontology
+
 This ontology represents fundamental concepts in privacy using OWL 2. It includes key entities such as Privacy Principles, Privacy Threats, Privacy Enhancing Technologies, Personal Information, and Privacy Laws, along with their respective subclasses, data properties, object properties, and some examples of individuals.
 
 Ontology Classes
 
 
-	Main Classes
+*	Main Classes
 
-o	Privacy Principle: Represents the fundamental principles for protecting privacy.
+-	Privacy Principle: Represents the fundamental principles for protecting privacy.
 
-o	Privacy Threat: Represents various privacy threats.
+-	Privacy Threat: Represents various privacy threats.
 
-o	Privacy Enhancing Technology: Technologies designed to protect privacy.
+-	Privacy Enhancing Technology: Technologies designed to protect privacy.
 
-o	Personal Information: Different types of personal data.
+-	Personal Information: Different types of personal data.
 
-o	Privacy Law: Legal frameworks governing privacy.
+-	Privacy Law: Legal frameworks governing privacy.
 
 
 
-	Subclasses
+*	Subclasses
 
 
 
-	Privacy Principal Subclasses
+*	Privacy Principal Subclasses
 
+-	Data Minimization: Limiting data collection to what is necessary.
 
-o	Data Minimization: Limiting data collection to what is necessary.
+-	Purpose Limitation: Data should only be used for specified purposes.
 
-o	Purpose Limitation: Data should only be used for specified purposes.
+- Transparency: Ensuring data processing is clear and understandable.
 
-o	Transparency: Ensuring data processing is clear and understandable.
+-	Accountability: Responsibility for data protection and privacy.
 
-o	Accountability: Responsibility for data protection and privacy.
+-	Consent: Permission given by the data subject for data processing.
 
-o	Consent: Permission given by the data subject for data processing.
 
 
+*	Privacy Threat Subclasses
 
-	Privacy Threat Subclasses
+-	Data Breach: Unauthorized access to data.
 
+-	Identity Theft: Fraudulent use of someone's data.
 
-o	Data Breach: Unauthorized access to data.
+-	Surveillance: Monitoring of activities.
 
-o	Identity Theft: Fraudulent use of someone's data.
+-	Phishing: Fraudulent attempts to obtain sensitive information.
 
-o	Surveillance: Monitoring of activities.
+-	Social Engineering: Manipulating people to disclose confidential information.
 
-o	Phishing: Fraudulent attempts to obtain sensitive information.
 
-o	Social Engineering: Manipulating people to disclose confidential information.
 
+*	Privacy Enhancing Technology Subclasses
 
+-	Encryption: Protecting data through encoding.
 
-	Privacy Enhancing Technology Subclasses
+-	Anonymization: Removing identifying information from data.
 
+-	Pseudonymization: Replacing private identifiers with fake identifiers.
 
-o	Encryption: Protecting data through encoding.
+-	Access Control: Restricting access to data.
 
-o	Anonymization: Removing identifying information from data.
+-	Secure Multi-Party Computation: Allowing parties to jointly compute a function over their inputs while keeping those inputs private.
 
-o	Pseudonymization: Replacing private identifiers with fake identifiers.
 
-o	Access Control: Restricting access to data.
 
-o	Secure Multi-Party Computation: Allowing parties to jointly compute a function over their inputs while keeping those inputs private.
+*	Personal Information Subclasses
 
+-	Biometric Data: Biological measurements (e.g., fingerprints).
 
+-	Contact Information: Information to contact someone (e.g., email).
 
-	Personal Information Subclasses
+-	Financial Information: Information related to finances.
 
+-	Health Information: Data concerning health status.
 
-o	Biometric Data: Biological measurements (e.g., fingerprints).
+-	Location Information: Data on physical location.
 
-o	Contact Information: Information to contact someone (e.g., email).
 
-o	Financial Information: Information related to finances.
 
-o	Health Information: Data concerning health status.
+*	Privacy Law Subclasses
 
-o	Location Information: Data on physical location.
+-	GDPR: General Data Protection Regulation.
 
+-	CCPA: California Consumer Privacy Act.
 
+-	HIPAA: Health Insurance Portability and Accountability Act.
 
-	Privacy Law Subclasses
+-	FERPA: Family Educational Rights and Privacy Act.
 
+-	COPPA: Children's Online Privacy Protection Act.
 
-o	GDPR: General Data Protection Regulation.
 
-o	CCPA: California Consumer Privacy Act.
 
-o	HIPAA: Health Insurance Portability and Accountability Act.
+*	Data Properties
 
-o	FERPA: Family Educational Rights and Privacy Act.
+-	has Description: (Domain: Privacy Principle) A brief description of the principle. (Range: xsd:string)
 
-o	COPPA: Children's Online Privacy Protection Act.
+-	has Severity: (Domain: Privacy Threat) The severity level of the threat. (Range: xsd:integer)
 
+-	has Implementation Cost: (Domain: Privacy Enhancing Technology) The cost of implementing the technology. (Range: xsd:float)
 
-	Data Properties
+-	has Data Value: (Domain: Personal Information) The type of personal data. (Range: xsd:string)
 
+-	has Effective Date: (Domain: Privacy Law) The date when the law came into effect. (Range: xsd:date)
 
-o	has Description: (Domain: Privacy Principle) A brief description of the principle. (Range: xsd:string)
 
-o	has Severity: (Domain: Privacy Threat) The severity level of the threat. (Range: xsd:integer)
 
-o	has Implementation Cost: (Domain: Privacy Enhancing Technology) The cost of implementing the technology. (Range: xsd:float)
+*	Object Properties
 
-o	has Data Value: (Domain: Personal Information) The type of personal data. (Range: xsd:string)
+-	is Protected By: (Domain: Personal Information, Range: Privacy Enhancing Technology) Links personal information to the technology protecting it.
 
-o	has Effective Date: (Domain: Privacy Law) The date when the law came into effect. (Range: xsd:date)
+-	is Threatened By: (Domain: Personal Information, Range: Privacy Threat) Links personal information to a threat.
 
+-	is Governed By: (Domain: Personal Information, Range: Privacy Law) Links personal information to a privacy law.
 
-	Object Properties
+-	implements Principle: (Domain: Privacy Enhancing Technology, Range: Privacy Principle) Links a technology to the privacy principle it implements.
 
+-	addresses Threat: (Domain: Privacy Enhancing Technology, Range: Privacy Threat) Links a technology to the threat it addresses.
 
-o	is Protected By: (Domain: Personal Information, Range: Privacy Enhancing Technology) Links personal information to the technology protecting it.
 
-o	is Threatened By: (Domain: Personal Information, Range: Privacy Threat) Links personal information to a threat.
+8	Individuals
 
-o	is Governed By: (Domain: Personal Information, Range: Privacy Law) Links personal information to a privacy law.
 
-o	implements Principle: (Domain: Privacy Enhancing Technology, Range: Privacy Principle) Links a technology to the privacy principle it implements.
+-	Principal Data Minimization: An individual with a description of Data Minimization.
 
-o	addresses Threat: (Domain: Privacy Enhancing Technology, Range: Privacy Threat) Links a technology to the threat it addresses.
+-	Threat Data Breach: An individual Data Breach with a severity level.
 
+-	Technology Encryption: An individual of Encryption with an implementation cost.
 
-	Individuals
-
-
-o	Principal Data Minimization: An individual with a description of Data Minimization.
-
-o	Threat Data Breach: An individual Data Breach with a severity level.
-
-o	Technology Encryption: An individual of Encryption with an implementation cost.
-
-o	Info Biometric Data: An individual of Biometric D
+-	Info Biometric Data: An individual of Biometric D
