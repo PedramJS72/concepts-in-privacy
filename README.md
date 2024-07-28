@@ -3,7 +3,9 @@ This ontology represents fundamental concepts in privacy using OWL 2. It include
 
 Ontology Classes
 
+
 	Main Classes
+
 o	Privacy Principle: Represents the fundamental principles for protecting privacy.
 
 o	Privacy Threat: Represents various privacy threats.
@@ -14,9 +16,14 @@ o	Personal Information: Different types of personal data.
 
 o	Privacy Law: Legal frameworks governing privacy.
 
+
+
 	Subclasses
 
+
+
 	Privacy Principal Subclasses
+
 
 o	Data Minimization: Limiting data collection to what is necessary.
 
@@ -28,7 +35,10 @@ o	Accountability: Responsibility for data protection and privacy.
 
 o	Consent: Permission given by the data subject for data processing.
 
+
+
 	Privacy Threat Subclasses
+
 
 o	Data Breach: Unauthorized access to data.
 
@@ -41,7 +51,9 @@ o	Phishing: Fraudulent attempts to obtain sensitive information.
 o	Social Engineering: Manipulating people to disclose confidential information.
 
 
+
 	Privacy Enhancing Technology Subclasses
+
 
 o	Encryption: Protecting data through encoding.
 
@@ -53,7 +65,10 @@ o	Access Control: Restricting access to data.
 
 o	Secure Multi-Party Computation: Allowing parties to jointly compute a function over their inputs while keeping those inputs private.
 
+
+
 	Personal Information Subclasses
+
 
 o	Biometric Data: Biological measurements (e.g., fingerprints).
 
@@ -66,7 +81,9 @@ o	Health Information: Data concerning health status.
 o	Location Information: Data on physical location.
 
 
+
 	Privacy Law Subclasses
+
 
 o	GDPR: General Data Protection Regulation.
 
@@ -81,6 +98,7 @@ o	COPPA: Children's Online Privacy Protection Act.
 
 	Data Properties
 
+
 o	has Description: (Domain: Privacy Principle) A brief description of the principle. (Range: xsd:string)
 
 o	has Severity: (Domain: Privacy Threat) The severity level of the threat. (Range: xsd:integer)
@@ -94,6 +112,7 @@ o	has Effective Date: (Domain: Privacy Law) The date when the law came into effe
 
 	Object Properties
 
+
 o	is Protected By: (Domain: Personal Information, Range: Privacy Enhancing Technology) Links personal information to the technology protecting it.
 
 o	is Threatened By: (Domain: Personal Information, Range: Privacy Threat) Links personal information to a threat.
@@ -106,6 +125,7 @@ o	addresses Threat: (Domain: Privacy Enhancing Technology, Range: Privacy Threat
 
 
 	Individuals
+
 
 o	Principal Data Minimization: An individual with a description of Data Minimization.
 
